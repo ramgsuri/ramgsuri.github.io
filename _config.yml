@@ -21,9 +21,7 @@ description: This is a place where Ram shares his learnings
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Learn markdown: "http://www.markdowntutorial.com/"
-  Author's home: "https://ramgsuri.me"
+  Author's home: "http://ramgsuri.me"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -100,7 +98,7 @@ url-pretty: "ramgsuri.me"  # eg. "deanattali.com/beautiful-jekyll"
 #gtag: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: "UA-156533219-1"
 
 # Google Tag Manager ID
 #gtm: ""
@@ -117,7 +115,7 @@ url-pretty: "ramgsuri.me"  # eg. "deanattali.com/beautiful-jekyll"
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: ""
+  disqus: "ramgsuri"
 
 # If you want to use JustComments fill with the API Key
 #just-comments: "ABCD-EFGH-IJKL"
