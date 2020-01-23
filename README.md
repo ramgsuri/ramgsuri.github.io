@@ -1,5 +1,4 @@
-# This project is build on the Beautiful Jekyll theme and the credit goes to :
-*Copyright 2019 [Dean Attali](https://deanattali.com)*
+# This project is build on the Beautiful Jekyll theme and the credit goes to *Copyright 2019 [Dean Attali](https://deanattali.com)*
 
 You can also fork or clone this project to use as a template for your site : 
 
