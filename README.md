@@ -18,8 +18,8 @@ Beautiful Jekyll is meant to be so simple to use that you can do it all within t
 
     ```bash
     cd <repository_folder>
-    docker build -t beautiful-jekyll "$PWD"
-    docker run -d -p 4000:4000 --name beautiful-jekyll -v "$PWD":/srv/jekyll beautiful-jekyll
+    docker build -t mysite "$PWD"
+    docker run -d -p 4000:4000 --name mysite -v "$PWD":/srv/jekyll mysite
     ```
 
 Now that Docker is set up, you do not need to run the above steps again. You can now view your website at http://localhost:4000/. You can start the container again in the future with:
