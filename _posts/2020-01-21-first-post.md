@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dev Commandments!! 
-image: /img/red_build.png
+image: img/hello_world.jpeg
 ---
 
 *  Thou shall not leave the build Red and go home : 
