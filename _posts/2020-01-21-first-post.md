@@ -10,15 +10,15 @@ image: img/hello_world.jpeg
   
 *  Thou shall push shorter and frequent commits :  
   
-*  Thou shall ensure pipeline ( last mile test ) is green :  
+*  Thou shall ensure pipeline ( all stages of pipeline including tests ) is green :  
   
 *  Thou shall revert the commit in case it fails and fix is going to take longer :  
   
-*  Thou should run the unit, functional and/or integration tests (as appropriate) before making a commit :   
+*  Thou should run the unit, functional and (or) integration tests (as appropriate) before making a commit :   
 
 *  Thou shalt not commit secrets to open source code repositories : 
   
-*  Thou shall update the dev Wiki (Confluence) with any new patterns, approaches, techie things of interest. Introducing builders in tests to help us create objects :  
+*  Thou shall update the dev Wiki (Confluence) with any new patterns, approaches, techie things of interest :  
   
 *  Thou shall callout, discuss and share the high level design decisions for all the critical and major functional areas before implementation : 
    
@@ -28,7 +28,7 @@ image: img/hello_world.jpeg
   
 *  Thou shall take feedback constructively and not shy away from sharing constructive feedback with your colleagues:
   
-*  Thou shall agree to meet each quarter & have a constructive conversation about our performance against these guiding principles, and identify areas of improvement:
+*  Thou shall agree to meet each quarter & have a constructive conversation about our performance against these guiding principles and identify areas of improvement:
   
 *  Thou shall keep JIRA and Confluence updated. :-)
 
