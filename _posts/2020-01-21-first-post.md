@@ -13,7 +13,8 @@ image: img/hello_world.jpeg
 *  Thou should run the unit, functional and (or) integration tests (as appropriate) before making a commit 
 
 *  Thou shall not commit secrets to open source code repositories 
-![secrets](https://media.giphy.com/media/LiRoVoHjMa5bO/giphy.gif)
+
+      ![secrets](https://media.giphy.com/media/LiRoVoHjMa5bO/giphy.gif)
   
 *  Thou shall update the dev Wiki (Confluence) with any new patterns, approaches, techie things of interest   
   
@@ -24,7 +25,8 @@ image: img/hello_world.jpeg
 *  Thou shall not leave the build Red and go home 
   
 *  Thou shall not checkin on Red build 
-![redbuild](../img/dev_commands/red_build.png)
+
+     ![redbuild](../img/dev_commands/red_build.png)
 
   
 *  Thou shall push shorter and frequent commits   
