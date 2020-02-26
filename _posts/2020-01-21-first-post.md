@@ -16,7 +16,7 @@ image: img/hello_world.jpeg
   
 *  Thou should run the unit, functional and (or) integration tests (as appropriate) before making a commit :   
 
-*  Thou shalt not commit secrets to open source code repositories : 
+*  Thou shall not commit secrets to open source code repositories : 
   
 *  Thou shall update the dev Wiki (Confluence) with any new patterns, approaches, techie things of interest :  
   
