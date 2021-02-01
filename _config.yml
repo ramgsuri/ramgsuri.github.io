@@ -20,6 +20,8 @@ description: This is a place where Ram shares his learnings
 
 # List of links in the navigation bar
 navbar-links:
+  Projects:
+    - Car Booking App: "https://github.com/ramgsuri/car-booking-app"
   About Me: "aboutme"
   Author's home: "http://ramgsuri.me"
 

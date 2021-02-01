@@ -59,17 +59,25 @@ comments: false
    This does not mean that if you have changed the name of a variable that is used in 15 files then you should create 15 separate commits.
    Basic principle to keep in mind, whatever code changes that belong together, they should be committed together, not separately but frequently.  
   
-*  **Thou shalt revert the commit in case it fails and fix is going to take longer:**   
-  
+*  **Thou shalt revert the commit in case it fails and fix is going to take longer:** 
+   If you are not sure of the code fix and if it is taking longer time, do not block others to commit the code.
+   Just revert your commit and then try to fix on your local first, run all tests and then push your commit.    
+   
 *  **Thou shalt take feedback constructively and not shy away from sharing constructive feedback with your colleagues:**
-
+   Learn the *Art Of Giving Constructive Feedback* so that you can focus on the situation or action instead of being personal.
+    
 *  **Thou shalt update the dev Wiki (Confluence) with any new patterns, approaches, techie things of interest:**   
-  
+   Whenever there is a new design decision or any new patterns evolved in the architecture, make sure 
+   to capture in the documentation in the form of ADRs ( *Architecture Decision Records* ) on confluence or
+   whatever tool you are using.   
+   
 *  **Thou shalt callout, discuss and share the high level design decisions for all the critical and major functional areas before implementation:**  
+   Call out a technical huddle as and when needed so that you can take help from team members and seek other opinions and ideas 
+   in that brainstorming session.
     
 *  **Thou shalt keep JIRA and Confluence updated:** :smile:
 
 *  **Thou shalt agree to meet each quarter & have a constructive conversation about our performance against these guiding principles and identify areas of improvement** 
-
+    
 
 
