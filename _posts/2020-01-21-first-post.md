@@ -8,7 +8,8 @@ tags: [Dev, Dev Principles]
 comments: false
 ---
   
-*  **Thou shalt always think about readability of code:** In short readability boils down to "*I like reading it*". Make sure whatever code you are writing, 
+*  **Thou shalt always think about readability of code:** 
+   In short readability boils down to "*I like reading it*". Make sure whatever code you are writing, 
    it is easy to follow logically. Always keep in mind basic principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) which stands for Don't Repeat Yourself.
    Also known as **DIE** Duplication is Evil.
  
@@ -24,7 +25,8 @@ comments: false
    Be careful when using someone else's code. If you copy and paste the code into your program, 
    please make sure that you aren't violating any contract as mentioned in the licenses.
 
-*  **Thou should run the unit, functional and (or) integration tests (as appropriate) before making a commit:** Don't forget to run unit tests and integration tests
+*  **Thou should run the unit, functional and (or) integration tests (as appropriate) before making a commit:**  
+   Don't forget to run unit tests and integration tests
    before making a commit. Testing before you commit is simply an added layer of protection. 
    It helps you to find errors, and bugs more quickly, before they are pushed to your server. Hence helps in improving code quality. 
 
@@ -59,19 +61,19 @@ comments: false
    This does not mean that if you have changed the name of a variable that is used in 15 files then you should create 15 separate commits.
    Basic principle to keep in mind, whatever code changes that belong together, they should be committed together, not separately but frequently.  
   
-*  **Thou shalt revert the commit in case it fails and fix is going to take longer:** 
+*  **Thou shalt revert the commit in case it fails and fix is going to take longer:**  
    If you are not sure of the code fix and if it is taking longer time, do not block others to commit the code.
    Just revert your commit and then try to fix on your local first, run all tests and then push your commit.    
    
-*  **Thou shalt take feedback constructively and not shy away from sharing constructive feedback with your colleagues:**
+*  **Thou shalt take feedback constructively and not shy away from sharing constructive feedback with your colleagues:** 
    Learn the *Art Of Giving Constructive Feedback* so that you can focus on the situation or action instead of being personal.
     
-*  **Thou shalt update the dev Wiki (Confluence) with any new patterns, approaches, techie things of interest:**   
+*  **Thou shalt update the dev Wiki (Confluence) with any new patterns, approaches, techie things of interest:**    
    Whenever there is a new design decision or any new patterns evolved in the architecture, make sure 
    to capture in the documentation in the form of ADRs ( *Architecture Decision Records* ) on confluence or
    whatever tool you are using.   
    
-*  **Thou shalt callout, discuss and share the high level design decisions for all the critical and major functional areas before implementation:**  
+*  **Thou shalt callout, discuss and share the high level design decisions for all the critical and major functional areas before implementation:**   
    Call out a technical huddle as and when needed so that you can take help from team members and seek other opinions and ideas 
    in that brainstorming session.
     
