@@ -8,7 +8,7 @@ tags: [Dev, Dev Principles]
 comments: false
 ---
   
-*  **Thou shalt always think about readability of code:** 
+*  **Thou shalt always think about readability of code:**  
    In short readability boils down to "*I like reading it*". Make sure whatever code you are writing, 
    it is easy to follow logically. Always keep in mind basic principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) which stands for Don't Repeat Yourself.
    Also known as **DIE** Duplication is Evil.
@@ -30,7 +30,7 @@ comments: false
    before making a commit. Testing before you commit is simply an added layer of protection. 
    It helps you to find errors, and bugs more quickly, before they are pushed to your server. Hence helps in improving code quality. 
 
-*  **Thou shalt not commit secrets to open source code repositories:** 
+*  **Thou shalt not commit secrets to open source code repositories:**  
    ![secrets](https://media.giphy.com/media/LiRoVoHjMa5bO/giphy.gif)  
    
    Never commit any keys or secrets to an open source repository because there are many people who go through the commit history of public repositories 
