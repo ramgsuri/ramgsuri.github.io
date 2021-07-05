@@ -22,6 +22,7 @@ description: This is a place where Ram shares his learnings
 navbar-links:
   Projects:
     - Car Booking App: "https://github.com/ramgsuri/car-booking-app"
+    - Spark Streaming: "https://github.com/ramgsuri/spark_streaming_live_tweets"
   About Me: "aboutme"
   Author's home: "http://ramgsuri.me"
 
@@ -68,7 +69,7 @@ author:
 social-network-links:
   rss: true
   email: "ramgsuri@gmail.com"
-  facebook: ramgsuri001
+#  facebook: ramgsuri001
   github: ramgsuri
   twitter: ramgsuri
 #  reddit: yourname
