@@ -96,12 +96,11 @@ and not misguide its readers.
    * Apache Superset
 
 ### Types Of EDA  
-* **Univariate Analysis**          
+* **Univariate Analysis**   
 This is the simplest form of data analysis, 
 where the data being analyzed consists of only one variable.The main purpose of this
 analysis is to describe data and find patterns within it.   
-Few Visualizations to perform Univariate Analysis :  
-
+Few Visualizations to perform Univariate Analysis :
   * Box Plot
   * Histogram
   * Stem and Leaf Plot
@@ -109,8 +108,8 @@ Few Visualizations to perform Univariate Analysis :
 * **BiVariate Analysis**  
 This is similar to univariate and this analysis can be descriptive or 
 inferential. It involves the analysis of the relationship between 
-two variables.
-
+two variables.  
+Few Visualizations to perform BiVariate Analysis :
   * Scatter Plot
   * Bivariate Line Chart
 
