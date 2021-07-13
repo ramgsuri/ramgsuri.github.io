@@ -83,7 +83,7 @@ The rule of arithmetic operations can be applied on them.
 * **Data Pre-processing**  
   
   *Classic Unix Tools*
-   * sed /awk
+   * sed/awk
    * Shell Scripts
    * GNU Parallel
      
