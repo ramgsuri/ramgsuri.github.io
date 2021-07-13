@@ -21,7 +21,7 @@ and summarize their main characteristics, often employing data visualization met
 * It helps in looking up data before making any assumptions.  
 * It can help ***identify obvious errors***, as well as better understand existing patterns within the data.
 * It helps in ***detecting outliers or anomalous events***, find interesting relationships among the variables / features.
-* Deliver ***data-driven insights*** to business stakeholders
+* Deliver ***data-driven insights*** to business stakeholders.
 
 ### Data & Its Types
 The term "data" was first used to denote "transmissible and storable computer information" in 1946 
