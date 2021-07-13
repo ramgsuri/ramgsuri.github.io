@@ -103,25 +103,25 @@ analysis is to describe data and find patterns within it.
 Few Visualizations to perform Univariate Analysis :
   * Box Plot
   * Histogram
-  * Stem and Leaf Plot
-
+  * Stem and Leaf Plot  
+  
 * **BiVariate Analysis**  
 This is similar to univariate and this analysis can be descriptive or 
 inferential. It involves the analysis of the relationship between 
 two variables.  
 Few Visualizations to perform BiVariate Analysis :
   * Scatter Plot
-  * Bivariate Line Chart
-
+  * Bivariate Line Chart  
+  
 * **Multivariate Analysis**  
 Multivariate data analysis refers to any statistical technique used to analyze 
 data that arises from more than one variable.  
-Few Visualizations to perform Multivariate Analysis :  
+Few Visualizations to perform Multivariate Analysis :
   * Scatter Plot
   * Bar Chart  
   * Bubble Chart
-  * Run Chart
-
+  * Run Chart  
+  
 * **Correlation Analysis**  
 
 {: .box-note}
