@@ -111,8 +111,8 @@ This is similar to univariate and this analysis can be descriptive or
 inferential. It involves the analysis of the relationship between 
 two variables.
 
-    * Scatter Plot
-    * Bivariate Line Chart
+  * Scatter Plot
+  * Bivariate Line Chart
 
 * **Multivariate Analysis**  
 Multivariate data analysis refers to any statistical technique used to analyze 
@@ -122,7 +122,7 @@ Few Visualizations to perform Multivariate Analysis :
   * Bar Chart  
   * Bubble Chart
   * Run Chart
-     
+
 * **Correlation Analysis**  
 
 {: .box-note}
