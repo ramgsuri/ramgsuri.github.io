@@ -68,11 +68,11 @@ The rule of arithmetic operations can be applied on them.
     * [www.data.gov.in](https://www.data.gov.in)  
     * [www.databank.worldbank.org](https://www.databank.worldbank.org)
        
-   *Social Websites* 
+   *Social Websites*
     * [www.facebook.com](https://www.facebook.com)
     * [www.twitter.com](https://www.twitter.com)
     
-   *Blogs / Websites etc via scrapping* 
+   *Blogs / Websites etc via scrapping*
     * JSoup
     * Beautiful Soup
    
@@ -94,9 +94,9 @@ and not misguide its readers.
   *Some Tools For Data Visualization & Dashboard*
    * Tableau
    * Apache Superset
-
+       
 ### Types Of EDA  
-* **Univariate Analysis**   
+* **Univariate Analysis**  
 This is the simplest form of data analysis, 
 where the data being analyzed consists of only one variable.The main purpose of this
 analysis is to describe data and find patterns within it.   
