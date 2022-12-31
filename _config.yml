@@ -98,10 +98,10 @@ url-pretty: "ramgsuri.me"  # eg. "deanattali.com/beautiful-jekyll"
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "G-VQ2B1RKTM2"
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-156533219-1"
+google_analytics: "G-VQ2B1RKTM2"
 
 # Google Tag Manager ID
 #gtm: ""
