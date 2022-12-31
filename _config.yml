@@ -61,6 +61,8 @@ footer-link-col: "#404040"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Ram G Suri
+  url: https://ramgsuri.me
+  twitter: ramgsuri
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -68,7 +70,7 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "ramgsuri@gmail.com"
+  email: "comps.science@gmail.com"
 #  facebook: ramgsuri001
   github: ramgsuri
   twitter: ramgsuri
