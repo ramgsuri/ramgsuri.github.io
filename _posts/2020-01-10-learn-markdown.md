@@ -4,6 +4,7 @@ title: Learn Markdown
 subtitle: This is subtitle for markdown
 gh-repo: ramgsuri
 gh-badge: [star, follow]
+image: img/markdown/markdown.png
 tags: [miscellaneous]
 comments: true
 ---
