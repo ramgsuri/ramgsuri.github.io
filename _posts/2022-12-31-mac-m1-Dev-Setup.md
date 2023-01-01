@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MAC M1 Dev Machine Setup 
+title: MacBook M1 Dev Machine Setup 
 image: img/mac_m1/mac_m1-min.jpg
 gh-badge: [star, follow]
 tags: [M1, MAC, DeveloperSetup, LocalMachineSetup]
@@ -10,7 +10,9 @@ comments: true
 {: .box-note}       
 If you are a Developer and trying to setup your new MAC M1 machine,  
 then this post can help you to get started with the Dev Machine setup.
+
 ![MAC-M1](../img/mac_m1/mac_title_image.jpg)
+
 ### 1. Rosetta 2 
 * Rosetta 2 is an x86–64 compatibility layer developed by Apple so you can install and run apps that 
 haven’t been ported to ARM yet.
@@ -49,7 +51,7 @@ This step is specifically for MAC M1.
   ```
   ![Homebrew_Verify](../img/mac_m1/homebrew_verify.png)
 
-### 4. Zsh & OmZsh
+### 4. Zsh & Ohmyzsh
 * ZSH, also called the Z shell, is an extended version of the Bourne Shell (sh),
   with plenty of new features, and support for plugins and themes.
   ```shell
