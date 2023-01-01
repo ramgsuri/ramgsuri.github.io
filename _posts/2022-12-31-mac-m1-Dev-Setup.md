@@ -6,12 +6,11 @@ gh-badge: [star, follow]
 tags: [M1, MAC, DeveloperSetup, LocalMachineSetup]
 comments: true
 ---
-![MAC-M1](../img/mac_m1/mac_title_image.jpg)
 
 {: .box-note}       
 If you are a Developer and trying to setup your new MAC M1 machine,  
 then this post can help you to get started with the Dev Machine setup.
-
+![MAC-M1](../img/mac_m1/mac_title_image.jpg)
 ### 1. Rosetta 2 
 * Rosetta 2 is an x86–64 compatibility layer developed by Apple so you can install and run apps that 
 haven’t been ported to ARM yet.
