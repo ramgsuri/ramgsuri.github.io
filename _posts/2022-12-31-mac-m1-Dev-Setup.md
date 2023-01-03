@@ -8,7 +8,7 @@ comments: true
 ---
 
 {: .box-note}       
-If you are a Developer and trying to setup your new MAC M1 machine,  
+If you are a Developer and trying to setup your new MAC M1 machine,
 then this post can help you to get started with the Dev Machine setup.
 
 ![MAC-M1](../img/mac_m1/mac_title_image.jpg)
@@ -39,7 +39,8 @@ and software in macOS.
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   ```
 * Once homebrew is installed, make sure to setup this PATH in .zshrc or bash_profile file. 
-This step is specifically for MAC M1. 
+This step is specifically for MAC M1 and order also matters otherwise brew doctor command 
+will give warnings.
 * ![brew_path](../img/mac_m1/path_brew_zshrc.png)
 * Once this is done you can run this below command to verify if your system is ready to use brew.
   ```shell
@@ -65,4 +66,54 @@ This step is specifically for MAC M1.
   * *For Zsh Autosuggestions* 
   ```git
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+  ```
+
+### 5. Git
+* Git is a free and open source distributed version control system (*DevOps Tool*) used for Source Code Management. 
+  ```shell
+  brew install git 
+  ```
+* Once git is installed then you can check the version by running command  "git --version".
+  ![git_version](../img/mac_m1/git.png)
+
+* ***How to setup multiple Git Accounts ?***  
+Your Mac has a SSH config file in a .ssh directory. The config file is where you establish relationships of your SSH keys
+to each GitHub (or Bitbucket) account, and all your SSH keys generated are saved into .ssh directory by default.
+  1. **Creating the SSH keys:**
+     ```shell
+     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"     
+     ```
+  2. Register your keys to respective Github accounts. Follow these 
+  [steps](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to do so.
+  3. **Go to SSH config file at ~/.ssh and amend accordingly to:**
+     ```javascript
+     #personal github user1-account
+     Host github.com
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/id_rsa
+     IdentitiesOnly yes
+          
+     #github.abc.com user2-account
+     Host github.com
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/jd_git_id_rsa
+     IdentitiesOnly yes
+     ```
+     ![ssh_config](../img/mac_m1/ssh_config.png)
+  4. Go ahead to git clone your respective repository.
+  5. Open up local git config using git config --local -e and add:
+     ```git
+     [user]
+          name = user1
+          email = user1@gmail.com
+     ``` 
+   6. Run git config --list to view git configurations.
+
+### 6. IntelliJ
+* IntelliJ IDEA is the professional IDE that enables enterprise and full-stack application development 
+& JVM development.
+  ```shell
+  brew install --cask intellij-idea
   ```
