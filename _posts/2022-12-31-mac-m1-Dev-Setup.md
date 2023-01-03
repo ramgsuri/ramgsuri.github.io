@@ -32,7 +32,7 @@ programming on Unix operating systems since long.
   ```
 
 ### 3. Homebrew
-* Homebrew (brew) is a free and open-source package manager that allows installation of apps 
+* Homebrew (brew) is a free and open-source package manager that allows installation of apps
 and software in macOS.
 * Run the following command on terminal to install homebrew.
   ```shell
@@ -86,7 +86,7 @@ to each GitHub (or Bitbucket) account, and all your SSH keys generated are saved
   2. Register your keys to respective Github accounts. Follow these 
   [steps](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to do so.
   3. **Go to SSH config file at ~/.ssh and amend accordingly to:**
-     ```javascript
+     ```git
      #personal github user1-account
      Host github.com
      HostName github.com
@@ -117,3 +117,57 @@ to each GitHub (or Bitbucket) account, and all your SSH keys generated are saved
   ```shell
   brew install --cask intellij-idea
   ```
+
+### 7. Colima
+* I found [Colima](https://github.com/abiosoft/colima/) to be a great drop-in replacement for Docker Desktop.
+If you need to run containers on your Mac, Colima is an open-source container runtime with minimal setup that works on 
+MacOS and Linux.
+* If you already have Docker installed on your MAC then you can run these commands to cleanup and uninstall Docker Desktop app.
+  ```shell
+  brew uninstall --cask docker
+  rm -rf ~/.dockercfg
+  ```
+* Now since you have installed brew then using brew you can setup Colima on your MAC in the fastest way.
+  * Install Colima
+    ```shell
+    brew install Colima 
+    ```
+  * Once Colima is installed then install Docker
+    ```shell
+    brew install Docker
+    brew install docker-credential-helper
+    ```
+  * Now install Docker Compose  
+    ```shell
+    mkdir -p ~/.docker/cli-plugins
+    curl -SL https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-darwin-aarch64 -o ~/.docker/cli-plugins/docker-compose
+    chmod +x ~/.docker/cli-plugins/docker-compose
+    ```
+  * Now start the colima  
+    ```shell
+    colima start
+    ```
+    ![docker_version.png](../img/mac_m1/colima.png)
+  * To verify the installation
+    ```shell
+    docker compose Version
+    ```
+    ![docker_version.png](../img/mac_m1/docker_version.png)
+    ```shell
+    docker run hello-world
+    ```
+    Now if you face this issue and unable to pull the hello-world image.
+    Error Like : 
+    ```git
+    Error response from daemon: Get "https://registry-1.docker.io/v2/": dial tcp:  
+    lookup registry-1.docker.io on 192.168.5.3:53: read udp 192.168.5.15:51522->192.168.5.3:53: i/o timeout
+    ```
+    ![docker_version.png](../img/mac_m1/error_docker_run.png)
+    Then try starting the colima with specific configurations of amdprofile: 
+    ```shell
+    colima start --arch amd --profile amdprofile
+    ```
+    ![docker_version.png](../img/mac_m1/colima_config.png)
+  * Now try pulling the image again by running the command : $ **docker run hello-world**
+    ![docker_version.png](../img/mac_m1/hello_world_docker.png)
+    
