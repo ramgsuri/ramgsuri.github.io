@@ -170,4 +170,10 @@ MacOS and Linux.
     ![docker_version.png](../img/mac_m1/colima_config.png)
   * Now try pulling the image again by running the command : $ **docker run hello-world**
     ![docker_version.png](../img/mac_m1/hello_world_docker.png)
-    
+
+### 8. Databricks-CLI
+* The Databricks command-line interface (CLI) provides an easy-to-use interface to the Databricks platform. 
+  Evaluate whether you have python3 
+  ```git
+  python3 -m pip install databricks-cli
+  ```
