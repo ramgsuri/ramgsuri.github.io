@@ -3,7 +3,7 @@ layout: post
 title: MacBook M1 Dev Machine Setup 
 image: img/mac_m1/mac_front_new.jpg
 gh-badge: [star, follow]
-tags: [M1, MAC, DeveloperSetup, LocalMachineSetup]
+tags: [M1, MAC, DeveloperSetup, MacM1Setup]
 comments: true
 ---
 
