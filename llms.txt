@@ -5,7 +5,7 @@ permalink: /llms.txt
 # Ram G Suri — {{ site.url | default: "https://ramgsuri.me" }}
 
 > Data & AI Engineer focused on Artificial Intelligence and Agentic AI, with a strong
-> background in Java, Spring, and Cloud (AWS). Shares knowledge through open-source
+> background in Python, Java, Spring, and Cloud (AWS & Azure). Shares knowledge through open-source
 > projects, conference talks, and YouTube videos on Spring and Java.
 
 This is the personal website and portfolio of Ram G Suri. It is a static Jekyll site.

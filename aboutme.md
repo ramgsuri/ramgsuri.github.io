@@ -8,9 +8,9 @@ tags: about
 I am Ram G — a Data & AI Engineer by profession and a problem solver by passion.
 
 These days my focus is on **Artificial Intelligence and Agentic AI** — building intelligent,
-agent-driven systems — alongside a long background in **Python, Java, Spring, and Cloud (AWS)**.
+agent-driven systems — alongside a long background in **Python, Java, Spring, and Cloud (AWS & Azure)**.
 I enjoy sharing what I learn through open-source projects, talks, and YouTube videos on
-Spring and Java.
+Agentic AI, Spring & Java.
 
 Explore my [portfolio](/portfolio) for skills, certifications, projects, talks, and videos.
 
