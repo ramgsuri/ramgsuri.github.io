@@ -1,10 +1,14 @@
 # --- General options --- #
 
 # Name of website
-title: Ram's Musings
+title: Ram G Suri — Data & AI Engineer
 
-# Short description of your site
-description: This is a place where Ram shares his learnings
+# Short description of your site (used by SEO meta description)
+description: "Ram G Suri — Data & AI Engineer specialising in Agentic AI, Data Products, LLMs, RAG, Context Engineering, Java, Spring, Python, Scala, Spark, Databricks and Cloud (AWS, Azure). Open-source, conference talks and tech tutorials."
+
+# Site URL (improves SEO: canonical URLs, sitemap, Open Graph)
+url: "https://ramgsuri.me"
+baseurl: ""
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -21,7 +25,7 @@ description: This is a place where Ram shares his learnings
 # List of links in the navigation bar
 navbar-links:
   Portfolio: "portfolio"
-  Blog: ""
+  Blog: "/"
   About Me: "aboutme"
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -61,6 +65,15 @@ author:
   name: Ram G Suri
   url: https://ramgsuri.me
   twitter: ramgsuri
+
+# Used by jekyll-seo-tag for structured data (sameAs links)
+social:
+  name: Ram G Suri
+  links:
+    - https://www.linkedin.com/in/ram-g-suri-80334116
+    - https://github.com/ramgsuri
+    - https://www.youtube.com/@ramsuri4543
+    - https://twitter.com/ramgsuri
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
