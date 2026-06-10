@@ -1,0 +1,164 @@
+---
+layout: page
+title: Portfolio
+subtitle: Skills, certifications, projects, talks & videos
+permalink: /portfolio
+css:
+  - "/css/portfolio.css"
+ext-css:
+  - href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+googlefonts:
+  - "Inter:wght@400;500;600;700"
+js:
+  - "/js/portfolio.js"
+---
+
+<!-- Section nav -->
+<nav class="pf-subnav">
+  <a href="#skills">Skills</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#projects">Projects</a>
+  <a href="#talks">Talks</a>
+  <a href="#publications">Publications</a>
+  <a href="#videos">Videos</a>
+  <a href="#blog">Blog</a>
+</nav>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="pf-section">
+  <h2 class="pf-heading">Skills</h2>
+  <div class="pf-skills-grid">
+    {% for group in site.data.portfolio.skills %}
+    <div class="pf-skill-card">
+      <h3><i class="{{ group.icon }}"></i> {{ group.group }}</h3>
+      <div class="pf-badges">
+        {% for item in group.items %}
+        <span class="pf-badge">{{ item }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications" class="pf-section">
+  <h2 class="pf-heading">Certifications</h2>
+  <div class="pf-cards">
+    {% for cert in site.data.portfolio.certifications %}
+    <div class="pf-cert-card">
+      {% if cert.image %}
+      <img class="pf-cert-img" src="{{ cert.image | relative_url }}" alt="{{ cert.title }}">
+      {% endif %}
+      <div class="pf-cert-body">
+        <h3>{{ cert.title }}</h3>
+        <p class="pf-cert-meta">{{ cert.issuer }}{% if cert.date %} &middot; {{ cert.date }}{% endif %}</p>
+        <div class="pf-cert-links">
+          {% if cert.url %}<a href="{{ cert.url }}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Verify</a>{% endif %}
+          {% if cert.pdf %}<a href="{{ cert.pdf | relative_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Certificate</a>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="pf-section">
+  <h2 class="pf-heading">Open-Source Projects</h2>
+  <div class="pf-cards">
+    {% assign projects = site.data.portfolio.projects | sort: "featured" | reverse %}
+    {% for project in projects %}
+    <div class="pf-project-card{% if project.featured %} pf-featured{% endif %}">
+      {% if project.image %}
+      <img class="pf-project-img" src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+      {% endif %}
+      <div class="pf-project-body">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        {% if project.tags %}
+        <div class="pf-badges">
+          {% for tag in project.tags %}<span class="pf-badge">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        {% if project.url %}<a class="pf-link" href="{{ project.url }}" target="_blank" rel="noopener"><i class="fab fa-github"></i> View project</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===================== TALKS ===================== -->
+<section id="talks" class="pf-section">
+  <h2 class="pf-heading">Talks</h2>
+  <div class="pf-cards">
+    {% for talk in site.data.portfolio.talks %}
+    <div class="pf-talk-card">
+      {% if talk.image %}
+      <img class="pf-talk-img" src="{{ talk.image | relative_url }}" alt="{{ talk.title }}">
+      {% endif %}
+      <div class="pf-talk-body">
+        <h3>{{ talk.title }}</h3>
+        <p class="pf-cert-meta">{{ talk.event }}{% if talk.date %} &middot; {{ talk.date }}{% endif %}</p>
+        {% if talk.url %}<a class="pf-link" href="{{ talk.url }}" target="_blank" rel="noopener"><i class="fas fa-play-circle"></i> Watch / Slides</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===================== PUBLICATIONS ===================== -->
+<section id="publications" class="pf-section">
+  <h2 class="pf-heading">Publications</h2>
+  <div class="pf-cards">
+    {% for pub in site.data.portfolio.publications %}
+    <div class="pf-talk-card">
+      <div class="pf-talk-body">
+        <h3>{{ pub.title }}</h3>
+        <p class="pf-cert-meta">{{ pub.publisher }}{% if pub.date %} &middot; {{ pub.date }}{% endif %}</p>
+        {% if pub.url %}<a class="pf-link" href="{{ pub.url }}" target="_blank" rel="noopener"><i class="fas fa-book-open"></i> Read article</a>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===================== VIDEOS ===================== -->
+<section id="videos" class="pf-section">
+  <h2 class="pf-heading">Videos</h2>
+  {% if site.data.portfolio.videos.channel_url %}
+  <p><a class="pf-link" href="{{ site.data.portfolio.videos.channel_url }}" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> View channel</a></p>
+  {% endif %}
+  <div class="pf-video-grid">
+    {% for video in site.data.portfolio.videos.list %}
+    <a class="pf-video-card" href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank" rel="noopener">
+      <span class="pf-video-thumb">
+        <img src="https://i.ytimg.com/vi/{{ video.id }}/hqdefault.jpg" alt="{{ video.title }}" loading="lazy">
+        <i class="fas fa-play-circle pf-video-play"></i>
+      </span>
+      <span class="pf-video-info">
+        {% if video.topic %}<span class="pf-badge">{{ video.topic }}</span>{% endif %}
+        <span class="pf-video-title">{{ video.title }}</span>
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ===================== BLOG ===================== -->
+<section id="blog" class="pf-section">
+  <h2 class="pf-heading">From the Blog</h2>
+  <div class="pf-cards">
+    {% for post in site.posts limit:3 %}
+    <div class="pf-project-card">
+      <div class="pf-project-body">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="pf-cert-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <a class="pf-link" href="{{ post.url | relative_url }}">Read more &rarr;</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <p style="margin-top:1.5rem;"><a class="pf-link" href="{{ '/' | relative_url }}">See all posts &rarr;</a></p>
+</section>

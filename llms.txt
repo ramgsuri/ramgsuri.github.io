@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# Ram G Suri — {{ site.url | default: "https://ramgsuri.me" }}
+
+> Data & AI Engineer focused on Artificial Intelligence and Agentic AI, with a strong
+> background in Java, Spring, and Cloud (AWS). Shares knowledge through open-source
+> projects, conference talks, and YouTube videos on Spring and Java.
+
+This is the personal website and portfolio of Ram G Suri. It is a static Jekyll site.
+
+## Pages
+- [Home]({{ "/" | absolute_url }}): Landing page and introduction.
+- [Portfolio]({{ "/portfolio" | absolute_url }}): Skills, certifications, projects, talks, and videos.
+- [About]({{ "/aboutme" | absolute_url }}): Biography and background.
+
+## Skills
+{% for group in site.data.portfolio.skills %}- {{ group.group }}: {{ group.items | join: ", " }}
+{% endfor %}
+
+## Projects
+{% for p in site.data.portfolio.projects %}- {{ p.title }}{% if p.url %} ({{ p.url }}){% endif %}: {{ p.description }}
+{% endfor %}
+
+## Blog posts
+{% for post in site.posts limit:20 %}- [{{ post.title }}]({{ post.url | absolute_url }}) — {{ post.date | date: "%Y-%m-%d" }}
+{% endfor %}
+
+## Links
+- GitHub: https://github.com/ramgsuri
+- LinkedIn: https://www.linkedin.com/in/ram-g-suri-80334116

@@ -1,0 +1,12 @@
+# Jekyll build output (GitHub Pages builds this itself)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# OS / editor cruft
+.DS_Store
+.idea/
+
+# Ruby
+.bundle/
+vendor/

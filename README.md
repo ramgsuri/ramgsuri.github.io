@@ -1,37 +1,67 @@
-# This project is build on the Beautiful Jekyll theme 
+# ramgsuri.me — personal website & portfolio
 
-You can also fork or clone this project to use as a template for your site : 
+Personal website and portfolio for **Ram G Suri**, live at **https://ramgsuri.me**.
+A static [Jekyll](https://jekyllrb.com/) site built on the
+[Beautiful-Jekyll](https://beautifuljekyll.com/) theme and hosted on **GitHub Pages**.
 
-Local development using Docker :
+> **Working with an AI coding agent?** Read **[CLAUDE.md](./CLAUDE.md)** /
+> **[AGENTS.md](./AGENTS.md)** first — they document the stack, commands, content
+> locations, conventions, and gotchas.
 
-Beautiful Jekyll is meant to be so simple to use that you can do it all within the browser. However, if you'd like to develop locally on your own machine, that's possible too if you're comfortable with command line. Follow these simple steps set that up with Docker:
-
-1. Make sure you have [Docker](https://www.docker.com/) installed.
-
-2. Clone your repository locally.
-
-    ```bash
-    git clone https://github.com/<your_username>/<your_username>.github.io.git
-    ```
-
-3. Run the following shell commands to build the docker image and start the container for the first time:
-
-    ```bash
-    cd <repository_folder>
-    docker build -t mysite "$PWD"
-    docker run -d -p 4000:4000 --name mysite -v "$PWD":/srv/jekyll mysite
-    ```
-
-Now that Docker is set up, you do not need to run the above steps again. You can now view your website at http://localhost:4000/. You can start the container again in the future with:
+## Quick start
 
 ```bash
-docker start mysite
+bundle install            # one-time: install dependencies
+
+./rebuild.sh              # build the site into _site/  (bundle exec jekyll build)
+python3 serve_local.py    # preview at http://localhost:4000
 ```
 
-And you can stop the server with:
+> `jekyll serve` does not work in this environment (Ruby built without OpenSSL +
+> `webrick` removed from Ruby 3 stdlib). Use `serve_local.py`, which serves the
+> built `_site/` with GitHub-Pages-style extension-less routing. See
+> [CLAUDE.md](./CLAUDE.md) for details.
+
+## Editing content
+
+Almost everything on the portfolio page is data-driven from a single file:
+
+- **`_data/portfolio.yml`** — skills, certifications, projects, talks, videos.
+  Add an entry by copying an existing list item. See
+  **[docs/CONTENT_GUIDE.md](./docs/CONTENT_GUIDE.md)**.
+
+Other pages: `index.html` (home/hero), `aboutme.md` (about), `_posts/` (blog),
+`_config.yml` (site config + navbar).
+
+## Project layout
+
+```
+_config.yml            Site config + navbar
+_data/portfolio.yml    Portfolio content (single source of truth)
+_layouts/ _includes/   Beautiful-Jekyll theme templates
+portfolio.html         Portfolio page (renders from _data/portfolio.yml)
+index.html aboutme.md  Home and About pages
+_posts/                Blog posts
+css/ js/ img/          Assets (css/portfolio.css holds portfolio styles)
+assets/certifications/ Certificate PDFs
+CNAME                  Custom domain (single line: ramgsuri.me)
+serve_local.py         Local preview server
+rebuild.sh             Rebuild helper
+docs/                  Documentation for humans and AI agents
+```
+
+## Deploying
+
+GitHub Pages auto-builds and deploys on push to the `master` branch.
+
+## Docker (alternative local dev)
+
+A `Dockerfile` is included if you prefer container-based development:
 
 ```bash
-docker stop mysite
+docker build -t mysite "$PWD"
+docker run -d -p 4000:4000 --name mysite -v "$PWD":/srv/jekyll mysite
+# http://localhost:4000  — restart with `docker start mysite`
 ```
 
-Whenever you make any changes to `_config.yml`, you must stop and re-start the server for the new config settings to take effect.
+Restart the container after editing `_config.yml`.

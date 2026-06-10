@@ -20,11 +20,9 @@ description: This is a place where Ram shares his learnings
 
 # List of links in the navigation bar
 navbar-links:
-  Projects:
-    - Car Booking App: "https://github.com/ramgsuri/car-booking-app"
-    - Spark Streaming: "https://github.com/ramgsuri/spark_streaming_live_tweets"
+  Portfolio: "portfolio"
+  Blog: ""
   About Me: "aboutme"
-  Author's home: "http://ramgsuri.me"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar

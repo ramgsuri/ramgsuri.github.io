@@ -4,6 +4,10 @@ title: Ram G Suri
 use-site-title: true
 cover-img:
   - "/img/personal/ramgsuri_home_img.jpg"
+ext-css:
+  - href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+googlefonts:
+  - "Inter:wght@400;500;600;700"
 ---
 
 
@@ -13,8 +17,8 @@ cover-img:
 <script>
   $(function(){
     $(".typed").typed({
-      strings: ["Technology.","Open Source.","Cloud Computing.","AI/ML.","Music.","Chess."],
-      typeSpeed: 100,
+      strings: ["Agentic AI.","Artificial Intelligence.","Cloud Computing.","Java &amp; Spring.","Open Source.","Music.","Chess.","Badminton."],
+      typeSpeed: 90,
       loop: true,
       backDelay: 1000
 
@@ -22,12 +26,35 @@ cover-img:
   });
 </script>
 
-<div class="mobile-js-hide">
+<div class="home-hero mobile-js-hide">
   <div class="row">
     <div class="col-sm-12">
       <div class="text-center">
-        <h1>I &hearts;  <span class="typed" style="color:#890000" ;></span></h1>
+        <p class="home-tagline">Data &amp; AI Engineer &middot; Agentic AI &middot; Cloud</p>
+        <h1 class="home-love">I &hearts; <span class="typed" style="color:#890000;"></span></h1>
+        <div class="home-cta">
+          <a class="home-btn home-btn-primary" href="{{ '/portfolio' | relative_url }}">View Portfolio</a>
+          <a class="home-btn" href="https://www.linkedin.com/in/ram-g-suri-80334116" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a class="home-btn" href="https://github.com/ramgsuri" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .home-hero { padding: 1.5rem 0 2.5rem; font-family: 'Inter', -apple-system, sans-serif; }
+  .home-tagline { font-size: 1.05rem; font-weight: 600; letter-spacing: .02em; color: #6b7280; margin-bottom: .4rem; text-transform: uppercase; }
+  .home-love { font-weight: 700; }
+  .home-cta { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+  .home-btn {
+    font-family: 'Inter', sans-serif; font-size: .9rem; font-weight: 600;
+    padding: .55rem 1.15rem; border-radius: 999px; text-decoration: none;
+    border: 1.5px solid #008AFF; color: #008AFF; background: #fff;
+    display: inline-flex; align-items: center; gap: .45rem;
+    transition: all .15s ease;
+  }
+  .home-btn:hover { background: #008AFF; color: #fff; text-decoration: none; }
+  .home-btn-primary { background: #008AFF; color: #fff; }
+  .home-btn-primary:hover { background: #0085A1; border-color: #0085A1; }
+</style>

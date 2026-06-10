@@ -1,0 +1,160 @@
+# =====================================================================
+#  PORTFOLIO CONTENT — edit this one file to update your /portfolio page.
+#  Sections: skills, certifications, projects, talks, videos.
+#  Indentation matters (2 spaces). Each "- " starts a new item.
+#  Lines starting with # are comments and are ignored.
+# =====================================================================
+
+
+# ----------------------------- SKILLS --------------------------------
+# Each group has a title, an icon (Font Awesome class), and items.
+skills:
+  - group: "AI & Agentic AI"
+    icon: "fas fa-robot"
+    items:
+      - "LLMs (Claude, GPT)"
+      - "Agentic AI / Multi-agent systems"
+      - "RAG"
+      - "Prompt Engineering"
+      - "LangChain"
+      - "Model Context Protocol (MCP)"
+
+  - group: "Java & Spring"
+    icon: "fab fa-java"
+    items:
+      - "Java"
+      - "Spring Boot"
+      - "Spring Cloud"
+      - "Microservices"
+      - "REST APIs"
+
+  - group: "Cloud & AWS"
+    icon: "fas fa-cloud"
+    items:
+      - "AWS"
+      - "Docker"
+      - "Kubernetes"
+      - "CI/CD"
+
+  - group: "Data & ML"
+    icon: "fas fa-chart-line"
+    items:
+      - "Python"
+      - "Spark"
+      - "Data Engineering"
+      - "EDA"
+
+
+# ------------------------- CERTIFICATIONS ----------------------------
+# title  : certification name
+# issuer : organisation that issued it
+# date   : e.g. "Mar 2025"
+# url    : (optional) public credential / verification link
+# image  : (optional) badge/logo -> put file in /img/portfolio/certs/
+# pdf    : (optional) certificate PDF -> put file in /assets/certifications/
+#
+# >>> Replace the example below with your real certifications. <<<
+certifications:
+  - title: "Chief Technology Officer (CTO) Programme"
+    issuer: "IIT Delhi — Department of Management Studies"
+    date: "Jan 2025"
+    pdf: "/assets/certifications/iit-delhi-cto.png"
+
+  - title: "Claude Code 101"
+    issuer: "Anthropic"
+    url: "https://verify.skilljar.com/c/hks9srigmihb"
+
+  - title: "Claude Code in Action"
+    issuer: "Anthropic"
+    url: "https://verify.skilljar.com/c/yobogcgkiqd9"
+
+  - title: "Build with Claude API"
+    issuer: "Anthropic"
+    url: "https://verify.skilljar.com/c/8axpqhwefrrx"
+
+  - title: "Introduction to Agent Skills"
+    issuer: "Anthropic"
+    url: "https://verify.skilljar.com/c/dmdnb29px4g8"
+
+  - title: "Introduction to Subagents"
+    issuer: "Anthropic"
+    url: "https://verify.skilljar.com/c/nveun75ttfrg"
+
+
+# ---------------------------- PROJECTS -------------------------------
+# title       : project name
+# description : one or two lines
+# url         : repo or live link
+# tags        : list of tech / topics (shown as badges)
+# image       : (optional) screenshot/logo -> /img/portfolio/projects/
+# featured    : true to highlight & sort first
+projects:
+  - title: "Visualisation Plugin — CarbonHack 2024"
+    description: "Open-source data product (Datamusers team, CarbonHack 2024 by the Green Software Foundation) that analyses carbon emissions and CPU energy consumption of servers and generates reports — usable directly in a CI/CD pipeline."
+    url: "https://github.com/ramgsuri/visualization-plugin"
+    tags:
+      - "Green Software"
+      - "Sustainability"
+      - "JavaScript"
+      - "CarbonHack 2024"
+      - "Open Source"
+    featured: true
+
+  - title: "Car Booking App"
+    description: "Sample microservices-based car booking application."
+    url: "https://github.com/ramgsuri/car-booking-app"
+    tags:
+      - "Java"
+      - "Spring Boot"
+      - "Microservices"
+
+  - title: "Spark Streaming — Live Tweets"
+    description: "Real-time tweet stream processing with Apache Spark."
+    url: "https://github.com/ramgsuri/spark_streaming_live_tweets"
+    tags:
+      - "Spark"
+      - "Streaming"
+      - "Data Engineering"
+
+
+# ----------------------------- TALKS ---------------------------------
+# title : talk title
+# event : conference / meetup name
+# date  : e.g. "Nov 2024"
+# url   : (optional) slides, recording or event page
+# image : (optional) photo -> /img/portfolio/talks/
+talks:
+  - title: "Data as a Product: Transforming Analytics for Business Success"
+    event: "XConf (Thoughtworks)"
+    date: "2024"
+    url: "https://www.youtube.com/watch?v=1wCnf6WGSfU"
+
+
+# ------------------------- PUBLICATIONS ------------------------------
+# Articles / blog posts published externally (e.g. on the AWS blog).
+# title     : article title
+# publisher : where it was published
+# date      : e.g. "2024"
+# url       : link to the article
+publications:
+  - title: "Revolutionizing the Aftermarket: Building Data Products and Unlocking Insights with AWS Analytics"
+    publisher: "AWS Partner Network (APN) Blog"
+    date: "2024"
+    url: "https://aws.amazon.com/blogs/apn/revolutionizing-the-aftermarket-building-data-products-and-unlocking-insights-with-aws-analytics/"
+
+
+# ----------------------------- VIDEOS --------------------------------
+# channel_url : (optional) your YouTube channel — shown as a button
+# list        : each video uses the 11-char id from
+#               https://www.youtube.com/watch?v=VIDEO_ID
+#               (thumbnail is fetched automatically)
+videos:
+  channel_url: "https://www.youtube.com/@ramsuri4543"
+  list:
+    - id: "pz5tNm1TRNE"
+      title: "CarbonHack 24 Hackathon — Datamusers team"
+      topic: "Green Software"
+
+    - id: "2fN2LAlhfBs"
+      title: "Understand Spring Boot in simple terms"
+      topic: "Spring"
