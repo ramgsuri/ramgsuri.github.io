@@ -3,14 +3,27 @@
 :root {
   --pf-accent: #008AFF;
   --pf-accent-dark: #0085A1;
+  --pf-link-text: #0067c9;   /* AA-compliant (>=4.5:1 on white) for link/badge text */
   --pf-bg: #ffffff;
   --pf-card: #ffffff;
   --pf-border: #e7ebf0;
   --pf-text: #2d2f33;
-  --pf-muted: #6b7280;
+  --pf-muted: #616977;       /* ~5:1 on white for meta text */
   --pf-radius: 14px;
   --pf-shadow: 0 4px 18px rgba(20, 30, 60, 0.07);
   --pf-shadow-hover: 0 10px 30px rgba(20, 30, 60, 0.14);
+}
+
+/* Accessibility: visible keyboard focus for all interactive elements */
+.pf-subnav a:focus-visible,
+.pf-link:focus-visible,
+.pf-cert-links a:focus-visible,
+.pf-video-thumb:focus-visible,
+.pf-video-card a:focus-visible,
+.pf-project-body h3 a:focus-visible {
+  outline: 3px solid var(--pf-link-text);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 #main-content .pf-section,
@@ -116,11 +129,11 @@ html { scroll-behavior: smooth; }
 .pf-badges { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .pf-badge {
   display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--pf-accent-dark);
-  background: rgba(0, 138, 255, 0.09);
-  border: 1px solid rgba(0, 138, 255, 0.18);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--pf-link-text);
+  background: rgba(0, 138, 255, 0.10);
+  border: 1px solid rgba(0, 138, 255, 0.22);
   padding: 0.28rem 0.65rem;
   border-radius: 999px;
 }
@@ -157,7 +170,7 @@ html { scroll-behavior: smooth; }
 .pf-cert-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .pf-cert-links a, .pf-link {
   font-size: 0.85rem; font-weight: 600;
-  color: var(--pf-accent); text-decoration: none;
+  color: var(--pf-link-text); text-decoration: none;
   display: inline-flex; align-items: center; gap: 0.35rem;
 }
 .pf-cert-links a:hover, .pf-link:hover { color: var(--pf-accent-dark); text-decoration: underline; }
@@ -177,8 +190,12 @@ html { scroll-behavior: smooth; }
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .pf-video-card:hover { transform: translateY(-3px); box-shadow: var(--pf-shadow-hover); }
-.pf-video-thumb { position: relative; display: block; }
+.pf-video-thumb { position: relative; display: block; width: 100%; padding: 0; border: none; background: none; cursor: pointer; }
 .pf-video-thumb img { width: 100%; height: 160px; object-fit: cover; display: block; }
+
+/* Inline player (replaces thumbnail on click) */
+.pf-video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.pf-video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .pf-video-play {
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%,-50%);

@@ -45,7 +45,8 @@ js:
 <section id="certifications" class="pf-section">
   <h2 class="pf-heading">Certifications</h2>
   <div class="pf-cards">
-    {% for cert in site.data.portfolio.certifications %}
+    {% assign certs = site.data.portfolio.certifications | sort: "sort" | reverse %}
+    {% for cert in certs %}
     <div class="pf-cert-card">
       {% if cert.image %}
       <img class="pf-cert-img" src="{{ cert.image | relative_url }}" alt="{{ cert.title }}">
@@ -93,14 +94,19 @@ js:
   <h2 class="pf-heading">Talks</h2>
   <div class="pf-cards">
     {% for talk in site.data.portfolio.talks %}
-    <div class="pf-talk-card">
-      {% if talk.image %}
+    <div class="pf-talk-card"{% if talk.video %} data-video-id="{{ talk.video }}" data-video-title="{{ talk.title | escape }}"{% endif %}>
+      {% if talk.video %}
+      <button class="pf-video-thumb" type="button" aria-label="Play: {{ talk.title | escape }}">
+        <img src="https://i.ytimg.com/vi/{{ talk.video }}/hqdefault.jpg" alt="{{ talk.title }}" loading="lazy">
+        <i class="fas fa-play-circle pf-video-play"></i>
+      </button>
+      {% elsif talk.image %}
       <img class="pf-talk-img" src="{{ talk.image | relative_url }}" alt="{{ talk.title }}">
       {% endif %}
       <div class="pf-talk-body">
         <h3>{{ talk.title }}</h3>
         <p class="pf-cert-meta">{{ talk.event }}{% if talk.date %} &middot; {{ talk.date }}{% endif %}</p>
-        {% if talk.url %}<a class="pf-link" href="{{ talk.url }}" target="_blank" rel="noopener"><i class="fas fa-play-circle"></i> Watch / Slides</a>{% endif %}
+        {% if talk.url %}<a class="pf-link" href="{{ talk.url }}" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> Watch on YouTube</a>{% endif %}
       </div>
     </div>
     {% endfor %}
@@ -131,16 +137,16 @@ js:
   {% endif %}
   <div class="pf-video-grid">
     {% for video in site.data.portfolio.videos.list %}
-    <a class="pf-video-card" href="https://www.youtube.com/watch?v={{ video.id }}" target="_blank" rel="noopener">
-      <span class="pf-video-thumb">
+    <div class="pf-video-card" data-video-id="{{ video.id }}" data-video-title="{{ video.title | escape }}">
+      <button class="pf-video-thumb" type="button" aria-label="Play: {{ video.title | escape }}">
         <img src="https://i.ytimg.com/vi/{{ video.id }}/hqdefault.jpg" alt="{{ video.title }}" loading="lazy">
         <i class="fas fa-play-circle pf-video-play"></i>
-      </span>
-      <span class="pf-video-info">
+      </button>
+      <div class="pf-video-info">
         {% if video.topic %}<span class="pf-badge">{{ video.topic }}</span>{% endif %}
         <span class="pf-video-title">{{ video.title }}</span>
-      </span>
-    </a>
+      </div>
+    </div>
     {% endfor %}
   </div>
 </section>

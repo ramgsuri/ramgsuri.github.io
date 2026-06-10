@@ -16,32 +16,38 @@ skills:
       - "Agentic AI / Multi-agent systems"
       - "RAG"
       - "Prompt Engineering"
+      - "Context Engineering"
       - "LangChain"
       - "Model Context Protocol (MCP)"
 
-  - group: "Java & Spring"
-    icon: "fab fa-java"
+  - group: "Frameworks & Programming Languages"
+    icon: "fas fa-code"
     items:
       - "Java"
+      - "Python"
+      - "Scala"
       - "Spring Boot"
       - "Spring Cloud"
       - "Microservices"
       - "REST APIs"
 
-  - group: "Cloud & AWS"
+  - group: "Cloud & DevOps"
     icon: "fas fa-cloud"
     items:
       - "AWS"
+      - "Azure"
       - "Docker"
       - "Kubernetes"
       - "CI/CD"
+      - "GitHub"
 
   - group: "Data & ML"
     icon: "fas fa-chart-line"
     items:
-      - "Python"
       - "Spark"
+      - "Databricks"
       - "Data Engineering"
+      - "Data Products"
       - "EDA"
 
 
@@ -55,30 +61,41 @@ skills:
 #
 # >>> Replace the example below with your real certifications. <<<
 certifications:
-  - title: "Chief Technology Officer (CTO) Programme"
-    issuer: "IIT Delhi — Department of Management Studies"
-    date: "Jan 2025"
-    pdf: "/assets/certifications/iit-delhi-cto.png"
-
   - title: "Claude Code 101"
     issuer: "Anthropic"
+    date: "May 2026"
+    sort: "2026-05"
     url: "https://verify.skilljar.com/c/hks9srigmihb"
 
   - title: "Claude Code in Action"
     issuer: "Anthropic"
+    date: "Jun 2026"
+    sort: "2026-06"
     url: "https://verify.skilljar.com/c/yobogcgkiqd9"
 
   - title: "Build with Claude API"
     issuer: "Anthropic"
+    date: "May 2026"
+    sort: "2026-05"
     url: "https://verify.skilljar.com/c/8axpqhwefrrx"
 
   - title: "Introduction to Agent Skills"
     issuer: "Anthropic"
+    date: "May 2026"
+    sort: "2026-05"
     url: "https://verify.skilljar.com/c/dmdnb29px4g8"
 
   - title: "Introduction to Subagents"
     issuer: "Anthropic"
+    date: "Jun 2026"
+    sort: "2026-06"
     url: "https://verify.skilljar.com/c/nveun75ttfrg"
+
+  - title: "Chief Technology Officer (CTO) Programme"
+    issuer: "IIT Delhi — Department of Management Studies"
+    date: "Jan 2025"
+    sort: "2025-01"
+    pdf: "/assets/certifications/iit-delhi-cto.jpeg"
 
 
 # ---------------------------- PROJECTS -------------------------------
@@ -127,6 +144,7 @@ talks:
   - title: "Data as a Product: Transforming Analytics for Business Success"
     event: "XConf (Thoughtworks)"
     date: "2024"
+    video: "1wCnf6WGSfU"
     url: "https://www.youtube.com/watch?v=1wCnf6WGSfU"
 
 

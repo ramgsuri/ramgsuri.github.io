@@ -30,6 +30,27 @@
     revealEls.forEach(function (el) { el.classList.add("pf-reveal"); io.observe(el); });
   }
 
+  // Click a video thumbnail to play it inline (privacy-friendly youtube-nocookie).
+  document.querySelectorAll(".pf-video-thumb").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var card = btn.closest("[data-video-id]");
+      if (!card || card.dataset.playing) return;
+      var id = card.getAttribute("data-video-id");
+      var title = card.getAttribute("data-video-title") || "Video";
+      var wrap = document.createElement("div");
+      wrap.className = "pf-video-embed";
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+      iframe.title = title;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.setAttribute("frameborder", "0");
+      wrap.appendChild(iframe);
+      btn.replaceWith(wrap);
+      card.dataset.playing = "1";
+    });
+  });
+
   // Highlight the active section link in the sub-nav.
   var sections = Array.prototype.slice.call(document.querySelectorAll(".pf-section[id]"));
   var navLinks = {};
