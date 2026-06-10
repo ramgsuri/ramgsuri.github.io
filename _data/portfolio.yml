@@ -145,6 +145,7 @@ talks:
     event: "XConf (Thoughtworks)"
     date: "2024"
     video: "1wCnf6WGSfU"
+    uploaded: "2025-02-09"
     url: "https://www.youtube.com/watch?v=1wCnf6WGSfU"
 
 
@@ -172,7 +173,9 @@ videos:
     - id: "pz5tNm1TRNE"
       title: "CarbonHack 24 Hackathon — Datamusers team"
       topic: "Green Software"
+      uploaded: "2024-04-09"
 
     - id: "2fN2LAlhfBs"
       title: "Understand Spring Boot in simple terms"
       topic: "Spring"
+      uploaded: "2024-05-07"

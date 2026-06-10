@@ -1,0 +1,17 @@
+{% comment %} BlogPosting structured data for blog posts {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.subtitle | default: page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+  {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
+  {% if page.tags %}"keywords": {{ page.tags | join: ", " | jsonify }},{% endif %}
+  "author": { "@type": "Person", "name": "Ram G Suri", "url": "{{ site.url }}" },
+  "publisher": { "@type": "Person", "name": "Ram G Suri", "url": "{{ site.url }}" }
+}
+</script>

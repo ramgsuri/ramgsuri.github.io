@@ -14,6 +14,38 @@ js:
   - "/js/portfolio.js"
 ---
 
+{% comment %} VideoObject structured data for talks (with video) and videos {% endcomment %}
+{% for v in site.data.portfolio.talks %}{% if v.video %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ v.title | jsonify }},
+  "description": {{ v.title | jsonify }},
+  "thumbnailUrl": "https://i.ytimg.com/vi/{{ v.video }}/hqdefault.jpg",
+  {% if v.uploaded %}"uploadDate": "{{ v.uploaded }}",{% endif %}
+  "embedUrl": "https://www.youtube.com/embed/{{ v.video }}",
+  "contentUrl": "https://www.youtube.com/watch?v={{ v.video }}",
+  "publisher": { "@type": "Person", "name": "Ram G Suri", "url": "{{ site.url }}" }
+}
+</script>
+{% endif %}{% endfor %}
+{% for v in site.data.portfolio.videos.list %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ v.title | jsonify }},
+  "description": {{ v.title | jsonify }},
+  "thumbnailUrl": "https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg",
+  {% if v.uploaded %}"uploadDate": "{{ v.uploaded }}",{% endif %}
+  "embedUrl": "https://www.youtube.com/embed/{{ v.id }}",
+  "contentUrl": "https://www.youtube.com/watch?v={{ v.id }}",
+  "publisher": { "@type": "Person", "name": "Ram G Suri", "url": "{{ site.url }}" }
+}
+</script>
+{% endfor %}
+
 <!-- Section nav -->
 <nav class="pf-subnav">
   <a href="#skills">Skills</a>
