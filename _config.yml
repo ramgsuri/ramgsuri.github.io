@@ -6,6 +6,9 @@ title: Ram G Suri — Data & AI Engineer
 # Short description of your site (used by SEO meta description)
 description: "Ram G Suri — Data & AI Engineer specialising in Agentic AI, Data Products, LLMs, RAG, Context Engineering, Java, Spring, Python, Scala, Spark, Databricks and Cloud (AWS, Azure). Open-source, conference talks and tech tutorials."
 
+# Short tagline used by jekyll-seo-tag for the homepage <title> suffix
+tagline: "Agentic AI · Data Products · Cloud"
+
 # Site URL (improves SEO: canonical URLs, sitemap, Open Graph)
 url: "https://ramgsuri.me"
 baseurl: ""
@@ -30,7 +33,7 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/personal/me1.png"
+avatar: "/img/personal/speaker_2026.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
